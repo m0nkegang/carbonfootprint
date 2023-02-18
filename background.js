@@ -57,13 +57,23 @@ catch{
 try {
 
   document.getElementById("totalenergyspent").innerHTML = Math.round(footprint*5635.8) + " kJ";
+  //1g CO2 absorbs 5635.8kj 
+}
+catch{
+  console.log("overriden");
+
+}
+
+try {
+
+  document.getElementById("message").innerHTML = "You have spent " + duration + " minutes in this session and exchanged " + roundedoff + " MB";
   
 }
 catch{
   console.log("overriden");
 
 }
-//1g CO2 absorbs 5635.8kj 
+
 
 function buildTable(data) {
   var table = document.getElementById("mynewtable");
