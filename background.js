@@ -15,11 +15,41 @@ for (const property in history) {
    totalData += history[property];
 }
 
-console.log(Math.round(totalData / (1024 * 1024)));
+
+
+function buildTable(data) {
+    var table = document.getElementById("myTable");
+    for (const property in history) {
+        console.log(history);
+        var row = `<tr>
+                          <td>${String(history)}</td>
+                          <td>${history[property]}</td>
+                          
+                    </tr>`;
+        table.innerHTML += row;
+     }
+     
+    for (var i = 0; i < data.length; i++) {
+      var row = `<tr>
+                          <td>${data}</td>
+                          <td>${data[i]}</td>
+                          
+                    </tr>`;
+      table.innerHTML += row;
+    }
+  }
+  
+buildTable(arr);
+
+let roundedoff = Math.round(totalData / (1024 * 1024));
+document.getElementById("Overall_footprint").innerHTML = "Carbon Emission  = " + String(roundedoff) + " gm";
 
 console.log(arr);
 console.log(his);
 console.log(duration);
-document.getElementById("durationtotal").innerText = duration + " Minutes";
+console.log("Total Data : " + totalData);
+//document.getElementById("durationtotal").innerText = duration + " Minutes";
+
+//document.getElementById("totalfootprint").innerText = String(getdata());
 //document.getElementById("Overall_footprint").innerHTML = "Footprint (gm) = 5000";
 
