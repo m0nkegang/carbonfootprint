@@ -41,7 +41,7 @@ function buildTable(data) {
                         </span>
                       </td>
                       <td class="px-4 py-3 text-sm">
-                        ${history[property]}
+                        ${history[property]} B
                       </td>
                     </tr>`;
         table.innerHTML += row;
