@@ -92,7 +92,7 @@ function buildTable(data) {
                       </div>
                     </td>
                     <td class="px-4 py-3 text-sm">
-                      TO be Added in grams
+                      ${((history[property]) * 11) / (1024 * 1024 * 1024)}
                     </td>
                     <td class="px-4 py-3 text-xs">
                       <span
