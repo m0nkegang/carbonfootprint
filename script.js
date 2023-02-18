@@ -24,6 +24,7 @@ setByteLengthPerOrigin = (_dbname, origin, byteLength) => {
 
 
 isChrome = () => {
+  console.log(typeof(browser));
   return (typeof(browser) === 'undefined');
 };
 
@@ -89,7 +90,7 @@ addOneHour = () => {
 let addOneMinuteInterval, addOneHourInterval;
 
 handleMessage = (request) => {
-
+  console.log("started");
   if ('start' === request.action) {
     setBrowserIcon('on');
 
