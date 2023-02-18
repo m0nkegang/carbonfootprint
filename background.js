@@ -22,21 +22,14 @@ function buildTable(data) {
     for (const property in history) {
         console.log(history);
         var row = `<tr>
-                          <td>${String(history)}</td>
+                          <td>${String(property)}</td>
                           <td>${history[property]}</td>
                           
                     </tr>`;
         table.innerHTML += row;
      }
      
-    for (var i = 0; i < data.length; i++) {
-      var row = `<tr>
-                          <td>${data}</td>
-                          <td>${data[i]}</td>
-                          
-                    </tr>`;
-      table.innerHTML += row;
-    }
+
   }
   
 buildTable(arr);
