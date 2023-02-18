@@ -15,7 +15,37 @@ for (const property in history) {
    totalData += history[property];
 }
 
+// Pie Chart
+let data = {
+    labels: [],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [],
+        backgroundColor: [],
+        hoverOffset: 4
+    }]
+};
 
+function randomColor() {
+    let color = 'rgb(';
+    for (let i = 0; i < 3; i++) {
+        let num = Math.floor(Math.random() * 256);
+        color = color.concat(String(num));
+        if (i < 2) {
+            color = color.concat(', ');
+        }
+    }
+    color = color.concat(')');
+    return color;
+}
+
+for (const property in history) {
+    data["labels"].push(property);
+    data["datasets"][0]["data"].push(history[property]);
+    data["datasets"][0]["backgroundColor"].push(randomColor());
+}
+
+console.log(data)
 
 function buildTable(data) {
     var table = document.getElementById("mynewtable");
