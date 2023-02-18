@@ -10,9 +10,60 @@ console.log(history);
 
 let totalData = 0;
 
+
 for (const property in history) {
   totalData += history[property];
 }
+let roundedoff = Math.round(totalData / (1024 * 1024));
+let footprint = ((totalData) * 11) / (1024 * 1024);
+
+
+try {
+
+  document.getElementById("durationtotal").innerText = duration + " Minutes";
+  
+}
+catch{
+  console.log("overriden");
+
+}
+try {
+
+  document.getElementById("Overall_footprint").innerHTML = "Footprint (gm) = " + roundedoff;
+  
+}
+catch{
+  console.log("overriden");
+
+}
+try {
+
+  document.getElementById("totaldataexchanged").innerHTML = roundedoff + " MB";
+  
+}
+catch{
+  console.log("overriden");
+
+}
+try {
+
+  document.getElementById("totalfootprint").innerHTML = Math.round(footprint) + " gm";
+  
+}
+catch{
+  console.log("overriden");
+
+}
+try {
+
+  document.getElementById("totalenergyspent").innerHTML = Math.round(footprint*5635.8) + " kJ";
+  
+}
+catch{
+  console.log("overriden");
+
+}
+//1g CO2 absorbs 5635.8kj 
 
 function buildTable(data) {
   var table = document.getElementById("mynewtable");
@@ -80,9 +131,7 @@ for (const property in history) {
 
 //console.log(data)
 
-let roundedoff = Math.round(totalData / (1024 * 1024));
-document.getElementById("Overall_footprint").innerHTML =
-  "Carbon Emission  = " + String(roundedoff) + " gm";
+
 
 console.log(arr);
 console.log(his);
@@ -91,4 +140,3 @@ console.log("Total Data : " + totalData);
 //document.getElementById("durationtotal").innerText = duration + " Minutes";
 
 //document.getElementById("totalfootprint").innerText = String(getdata());
-//document.getElementById("Overall_footprint").innerHTML = "Footprint (gm) = 5000";
