@@ -29,7 +29,7 @@ catch{
 }
 try {
 
-  document.getElementById("Overall_footprint").innerHTML = "Footprint (gm) = " + roundedoff;
+  document.getElementById("Overall_footprint").innerHTML = "Total Footprint (CO2)= " + Math.round(footprint) + " gm";
   
 }
 catch{
