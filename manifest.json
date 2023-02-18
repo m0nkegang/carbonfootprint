@@ -13,5 +13,8 @@
     "default_popup": "popup.html"
   },
   "host_permissions": ["*://*/*"],
-  "permissions": ["scripting", "activeTab"]
+  "permissions": ["scripting", "activeTab"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net/;"
+}
 }

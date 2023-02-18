@@ -10,6 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href=".\dashboard\assets\css\style.css">
+    <link rel="stylesheet" href=".\dashboard\assets\css\tailwind.css">
+    <link rel="stylesheet" href=".\dashboard\assets\css\tailwind.output.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    
+    <script src="./assets/js/init-alpine.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+    <script src="./assets/js/charts-lines.js" defer></script>
+    <script src="./assets/js/charts-pie.js" defer></script>
 
     <style>
         body {
@@ -29,24 +39,26 @@
         <h2 class="w3-wide">Carbon Footprint Detector</h2>
         <p class="w3-opacity"><i>1 GB of data from the internet emits 11 grams of
                 CO2-equivalents.</i></p>
-        <p id="Overall_footprint" class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> All Time Carbon Footprint = Some
+        <br>
+        <p id="Overall_footprint" class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> Carbon
+            Footprint (gm)= Some
             Number
         </p>
-        <p id="Session_footprint" class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> This
-            Session's Footprint = Some
-            Number
-        </p>
-        <a class="btn btn-primary" href="stats.html" target="_blank" rel="noopener noreferrer" role="button">View
-            Stats</a>
-        <a class="btn btn-secondary" href=".\rank.html" target="_blank" rel="noopener noreferrer" role="button">View
-            Leaderboard</a>
+
+        <br>
+
+        <a class="btn btn-primary" href="./dashboard/index.html" target="_blank" rel="noopener noreferrer"
+            role="button">View
+            Dashboard</a>
+
         <br>
         <br>
         <br>
         <span class="badge rounded-pill bg-success">Eco-friendly</span>
     </div>
-    
+
     <script src="background.js"></script>
+
 </body>
 
 </html>
