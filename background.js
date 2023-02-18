@@ -18,13 +18,31 @@ for (const property in history) {
 
 
 function buildTable(data) {
-    var table = document.getElementById("myTable");
+    var table = document.getElementById("mynewtable");
     for (const property in history) {
         console.log(history);
-        var row = `<tr>
-                          <td>${String(property)}</td>
-                          <td>${history[property]}</td>
+        var row = `<tr class="text-gray-700 dark:text-gray-400">
+                      <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
                           
+                          <div>
+                            <p class="font-semibold">${property}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        TO be Added in grams
+                      </td>
+                      <td class="px-4 py-3 text-xs">
+                        <span
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                        >
+                          Approved
+                        </span>
+                      </td>
+                      <td class="px-4 py-3 text-sm">
+                        ${history[property]}
+                      </td>
                     </tr>`;
         table.innerHTML += row;
      }
