@@ -59,8 +59,7 @@ catch{
 }
 try {
 
-  document.getElementById("totalenergyspent").innerHTML = (footprint*JPerByteDataCenter) + " J";
-  //1g CO2 absorbs 5635.8kj 
+  document.getElementById("totalenergyspent").innerHTML = (footprint*JPerByteDataCenter).toFixed(5) + " J";
 }
 catch{
   console.log("overriden");
