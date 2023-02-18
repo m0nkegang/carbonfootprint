@@ -1,5 +1,6 @@
 chrome.runtime.sendMessage({ action: "start" });
 let his = JSON.parse(localStorage.getItem("myEmissionHistory"));
+const JPerByteDataCenter = 3600 * 0.000000072;
 let duration = localStorage.getItem("duration");
 let stats = localStorage.getItem("stats");
 let arr = JSON.parse(his[0]);
@@ -14,9 +15,11 @@ let totalData = 0;
 for (const property in history) {
   totalData += history[property];
 }
-let roundedoff = Math.round(totalData / (1024 * 1024));
-let footprint = ((totalData) * 11) / (1024 * 1024);
 
+// data in MB
+let roundedoff = Math.round(totalData / (1024 * 1024));
+// carbon footprint in gm
+let footprint = ((totalData) * 11) / (1024 * 1024 * 1024);
 
 try {
 
@@ -56,7 +59,7 @@ catch{
 }
 try {
 
-  document.getElementById("totalenergyspent").innerHTML = Math.round(footprint*5635.8) + " kJ";
+  document.getElementById("totalenergyspent").innerHTML = (footprint*JPerByteDataCenter) + " J";
   //1g CO2 absorbs 5635.8kj 
 }
 catch{
