@@ -4,7 +4,7 @@
 const lineConfig = {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     datasets: [
       {
         label: 'Organic',
@@ -14,19 +14,8 @@ const lineConfig = {
          */
         backgroundColor: '#0694a2',
         borderColor: '#0694a2',
-        data: [43, 48, 40, 54, 67, 73, 70],
+        data: [],
         fill: false,
-      },
-      {
-        label: 'Paid',
-        fill: false,
-        /**
-         * These colors come from Tailwind CSS palette
-         * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
-         */
-        backgroundColor: '#7e3af2',
-        borderColor: '#7e3af2',
-        data: [24, 50, 64, 74, 52, 51, 65],
       },
     ],
   },
@@ -65,6 +54,13 @@ const lineConfig = {
     },
   },
 }
+
+console.log(lineConfig)
+for (let i = 0; i < lineConfig.data.labels.length; i++) {
+  lineConfig.data.datasets[0].data.push(lineConfig.data.labels[i] * JPerByteDataCenter);
+}
+
+console.log(lineConfig);
 
 // change this to the id of your chart element in HMTL
 const lineCtx = document.getElementById('line')
