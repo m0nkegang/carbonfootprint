@@ -110,7 +110,7 @@ function buildTable(data) {
 
 buildTable(arr);
 // Pie Chart
-
+/*
 let pdata = {
   labels : [],
   data : [],
@@ -163,7 +163,7 @@ for (const property in history) {
 const pieCtx = document.getElementById('pie')
 window.myPie = new Chart(pieCtx, pieConfig)
 
-chart
+*/
 
 //console.log(data)
 
