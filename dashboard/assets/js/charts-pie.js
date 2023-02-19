@@ -1,16 +1,22 @@
+// Pie Chart
+let pdata = {
+  labels : [],
+  data : [],
+  backgroundColor : []
+};
 
 const pieConfig = {
   type: 'doughnut',
   data: {
     datasets: [
       {
-        data: [33, 33, 33],
+        data: pdata.data,
 
-        backgroundColor: ['#0694a2', '#1c64f2', '#7e3af2'],
+        backgroundColor: pdata.backgroundColor,
         label: 'Dataset 1',
       },
     ],
-    labels: ['Shoes', 'Shirts', 'Bags'],
+    labels: pdata.labels,
   },
   options: {
     responsive: true,
@@ -20,6 +26,25 @@ const pieConfig = {
       display: false,
     },
   },
+}
+
+function randomColor() {
+  let color = "rgb(";
+  for (let i = 0; i < 3; i++) {
+    let num = Math.floor(Math.random() * 256);
+    color = color.concat(String(num));
+    if (i < 2) {
+      color = color.concat(", ");
+    }
+  }
+  color = color.concat(")");
+  return color;
+}
+
+for (const property in history) {
+  pdata["labels"].push(property);
+  pdata["data"].push(history[property]);
+  pdata["backgroundColor"].push(randomColor());
 }
 
 // change this to the id of your chart element in HMTL
