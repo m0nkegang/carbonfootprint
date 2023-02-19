@@ -28,8 +28,10 @@ Then Unload files from the cloned repository
 - Finally , we Bring out the light to our Extension page through Making a UI for showing Total Emissions and Emission details on the main screen.
 - Along with this, **Dashboard** Screen for all Ranking Webistes based off emissions and a detailed information on the amount of resources utilised while browsing. 
 
-###
+### Sample Screenshots
 
+![](./images/1.png) 
+![](./images/2.png)
 
 ## Team Members/Contributors 
 [Santhosh Sundaram](https://github.com/santacodes) - AU, Trichy
